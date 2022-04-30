@@ -1,10 +1,8 @@
--- DML: clear each table before inserting new data
+-- DML: to insert some data into
 
 DELETE FROM gene_alias;
 DELETE FROM gene_desc;
 DELETE FROM gene_info;
-
---DML to insert data in to gene_info table 
 
 INSERT INTO gene_info (gene_id, gene_sym, gene_status, gene_uniprot, gene_loc)
 VALUES ('7157','TP53','REVIEWED','P04637','17p13.1'), 
@@ -25,9 +23,10 @@ VALUES ('7157','TP53','REVIEWED','P04637','17p13.1'),
 ('8061','FOSL1','REVIEWED','P15407','11q13.1'),
 ('150483','TEKT4','VALIDATED','Q8WW24','2q11.1'),
 ('10180','RBM6','VALIDATED','P78332','3p21.31'),
-('92359','CRB3','REVIEWED','Q9BUF7','19p13.3');
+('92359','CRB3','REVIEWED','Q9BUF7','19p13.3'),
+('387104','SOGA3','VALIDATED','Q5TF21','6q22.33');
 
--- DML to insert data into gene_alias table 
+-- DML to insert data into
 
 INSERT INTO gene_alias (gene_id, alias)
 VALUES ('7157','P53'), ('7157','BCC7'), ('7157','LFS1'), ('7157','BMFS5'),
@@ -41,9 +40,8 @@ VALUES ('7157','P53'), ('7157','BCC7'), ('7157','LFS1'), ('7157','BMFS5'),
 ('54902','MC3DN2'), ('54902','2010204O13Rik'), ('8877','SPHK'),
 ('8061','FRA'), ('8061','FRA1'), ('8061','fra-1'), ('150483',''),
 ('10180','3G2'), ('10180','g16'), ('10180','DEF3'), ('10180','DEF-3'), 
-('10180','HLC-11'), ('10180','NY-LU-12'), ('92359','');
-
--- DML to insert data into gene_desc table
+('10180','HLC-11'), ('10180','NY-LU-12'), ('92359',''), ('387104','C6orf174'),
+('387104','dJ403A15.3');
 
 INSERT INTO gene_desc (gene_id, gene_type, gene_sum)
 VALUES ('7157','protein coding','This gene encodes a tumor suppressor protein containing transcriptional activation, DNA binding, and oligomerization domains. The encoded protein responds to diverse cellular stresses to regulate expression of target genes, thereby inducing cell cycle arrest, apoptosis, senescence, DNA repair, or changes in metabolism. Mutations in this gene are associated with a variety of human cancers, including hereditary cancers such as Li-Fraumeni syndrome. Alternative splicing of this gene and the use of alternate promoters result in multiple transcript variants and isoforms. Additional isoforms have also been shown to result from the use of alternate translation initiation codons from identical transcript variants'), 
@@ -62,4 +60,5 @@ VALUES ('7157','protein coding','This gene encodes a tumor suppressor protein co
 ('8061','protein coding','The Fos gene family consists of 4 members: FOS, FOSB, FOSL1, and FOSL2. These genes encode leucine zipper proteins that can dimerize with proteins of the JUN family, thereby forming the transcription factor complex AP-1. As such, the FOS proteins have been implicated as regulators of cell proliferation, differentiation, and transformation. Several transcript variants encoding different isoforms have been found for this gene.'),
 ('150483','protein coding','Predicted to be involved in cilium assembly and cilium movement involved in cell motility. Predicted to act upstream of or within regulation of brood size. Located in nucleus.'),
 ('10180','protein coding','Enables RNA binding activity. Predicted to be involved in mRNA splicing, via spliceosome. Predicted to be active in nucleus.'),
-('92359','protein coding','This gene encodes a member of the Crumbs family of proteins. This gene is widely expressed in epithelial tissues where the encoded protein isoforms play various roles such as the control of cytokinesis and ciliogenesis or the formation of tight junctions. Alternative splicing results in multiple transcript variants encoding different isoforms.');
+('92359','protein coding','This gene encodes a member of the Crumbs family of proteins. This gene is widely expressed in epithelial tissues where the encoded protein isoforms play various roles such as the control of cytokinesis and ciliogenesis or the formation of tight junctions. Alternative splicing results in multiple transcript variants encoding different isoforms.'),
+('387104','protein coding','Predicted to be involved in regulation of autophagy. Predicted to be located in extracellular space. Predicted to be integral component of membrane.');
