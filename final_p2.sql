@@ -1,4 +1,4 @@
--- DDL for final project 
+-- DDL for final project table gene_info
 
 CREATE TABLE IF NOT EXISTS gene_info (
 	PRIMARY KEY (gene_id, gene_sym),
@@ -9,11 +9,15 @@ CREATE TABLE IF NOT EXISTS gene_info (
 	gene_loc VARCHAR(100) NOT NULL
 );
 
+-- DDL for final project table gene_alias
+
 CREATE TABLE IF NOT EXISTS gene_alias (
 	FOREIGN KEY (gene_id) REFERENCES gene_info (gene_id),
 	gene_id INT(50) NOT NULL,
 	alias VARCHAR(250) NOT NULL
 );
+
+--DDL for final project table gene_desc
 
 CREATE TABLE IF NOT EXISTS gene_desc (
 	FOREIGN KEY (gene_id) REFERENCES gene_info (gene_id),
