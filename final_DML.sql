@@ -1,8 +1,10 @@
--- DML: to insert some data into
+-- DML: section to clear all the tables proir to each run
 
 DELETE FROM gene_alias;
 DELETE FROM gene_desc;
 DELETE FROM gene_info;
+
+--DML: section to insert all data into the gene_info table
 
 INSERT INTO gene_info (gene_id, gene_sym, gene_status, gene_uniprot, gene_loc)
 VALUES ('7157','TP53','REVIEWED','P04637','17p13.1'), 
@@ -26,7 +28,7 @@ VALUES ('7157','TP53','REVIEWED','P04637','17p13.1'),
 ('92359','CRB3','REVIEWED','Q9BUF7','19p13.3'),
 ('387104','SOGA3','VALIDATED','Q5TF21','6q22.33');
 
--- DML to insert data into
+-- DML: section to insert all data into gene_alias table
 
 INSERT INTO gene_alias (gene_id, alias)
 VALUES ('7157','P53'), ('7157','BCC7'), ('7157','LFS1'), ('7157','BMFS5'),
@@ -42,6 +44,8 @@ VALUES ('7157','P53'), ('7157','BCC7'), ('7157','LFS1'), ('7157','BMFS5'),
 ('10180','3G2'), ('10180','g16'), ('10180','DEF3'), ('10180','DEF-3'), 
 ('10180','HLC-11'), ('10180','NY-LU-12'), ('92359',''), ('387104','C6orf174'),
 ('387104','dJ403A15.3');
+
+--DML: section to insert all data into the gene_desc table 
 
 INSERT INTO gene_desc (gene_id, gene_type, gene_sum)
 VALUES ('7157','protein coding','This gene encodes a tumor suppressor protein containing transcriptional activation, DNA binding, and oligomerization domains. The encoded protein responds to diverse cellular stresses to regulate expression of target genes, thereby inducing cell cycle arrest, apoptosis, senescence, DNA repair, or changes in metabolism. Mutations in this gene are associated with a variety of human cancers, including hereditary cancers such as Li-Fraumeni syndrome. Alternative splicing of this gene and the use of alternate promoters result in multiple transcript variants and isoforms. Additional isoforms have also been shown to result from the use of alternate translation initiation codons from identical transcript variants'), 
